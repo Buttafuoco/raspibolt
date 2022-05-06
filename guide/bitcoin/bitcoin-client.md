@@ -134,7 +134,7 @@ Instead of creating this directory, we create a data directory in the general da
 * Create the symbolic link `.bitcoin` that points to that directory
 
   ```sh
-  $ ln -s /data/bitcoin /home/bitcoin/.bitcoin
+  $ sudo ln -s /data/bitcoin /home/bitcoin/.bitcoin
   ```
 
 * Display the link and check that it is not shown in red (this would indicate an error)
