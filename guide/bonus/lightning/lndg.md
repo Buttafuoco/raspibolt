@@ -142,13 +142,14 @@ If you didn't save the password, you can get it again with: `nano /home/lndg/lnd
 
   ```sh
   $ rm /home/lndg/lndg/data/lndg-admin.txt
+  $ exit
   ```
 
 ### Make the LNDg database easy to backup
 
 LNDg stores the LN node routing statistics and settings in a SQL database. We'll move this database to our data folder to make it easier to archive or backup if desired.
 
-* Create the LNDg data directory and copy the database over
+* With user Admin, create the LNDg data directory and copy the database over
  
   ```sh
   $ sudo mkdir /data/lndg
@@ -178,6 +179,11 @@ LNDg stores the LN node routing statistics and settings in a SQL database. We'll
 ### Web server configuration
 
 * Install uwsgi within the LNDg Python virtual environment
+
+```sh
+  $ sudo su - lndg
+  $ cd lndg
+  ```
 
   ```sh
   $ .venv/bin/python -m pip install uwsgi
